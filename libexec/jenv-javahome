@@ -8,21 +8,21 @@ set -e
 [ -n "$JENV_DEBUG" ] && set -x      
 
 
-exportVariable(){   
-echo $exportedValues
-   exportedValues="$exportedValues:$1"
-   export $1="$2 $3 $4 $5 $6 $7 $8 $9"
-}
+#exportVariable(){
+#echo $exportedValues
+#   exportedValues="$exportedValues:$1"
+#   export $1="$2 $3 $4 $5 $6 $7 $8 $9"
+#}
 
 # Provide jenv completions
-if [ "$1" = "--complete" ]; then
-  exec jenv shims --short
-fi
+#if [ "$1" = "--complete" ]; then
+#  exec jenv shims --short
+#fi
 
 export JENV_VERSION="$(jenv-version-name)"
 
 
-export JENV_OPTIONS="$(jenv-options)"    
+#export JENV_OPTIONS="$(jenv-options)"
 
 
 export JAVA_HOME="$JENV_ROOT/versions/$JENV_VERSION"    
